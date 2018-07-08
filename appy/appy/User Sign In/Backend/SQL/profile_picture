@@ -1,0 +1,4 @@
+CREATE TABLE user_profile_picuture (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    image_id INTEGER,
+    image_name TEXT,
+  );

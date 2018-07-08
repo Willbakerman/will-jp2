@@ -1,0 +1,17 @@
+CREATE TABLE user_personal_info (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    first_name TEXT,
+    last_name TEXT,
+    email_address TEXT,
+    confirm_email_address TEXT,
+    password TEXT,
+    confirm_password TEXT,
+    user_name TEXT,
+    post_code TEXT,
+    sex TEXT,
+    sexual_preference TEXT,
+    dob TEXT,
+    instagram_account TEXT,
+  
+
+);

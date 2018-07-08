@@ -1,0 +1,112 @@
+<?php
+  session_start();
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="../../style.css">
+  </head>
+
+  <body>
+
+
+      <a href="https://www.youtube.com/watch?v=HdIo6-PWdkw">NEXT VIDEO TO WATCH TO IMPOVE</a>
+
+    <h2>Already have an account? Sign in!</h2>
+      <form action="/login.php" method="POST">
+
+        <h6>First name</h6><input type="text" name="firstname"></br>
+        <h6>last name</h6><input type="text" name="lastname"></br>
+        <h6>Username</h6><input type="text" name="username"></br>
+        <h6>Password</h6><input type="password" name="psw"></br>
+        <button class="bttn-white" type="submit">LOG IN</button>
+
+      </form>
+<!–– this php code below decides what happens if you are logged in or not ––>
+      <?php
+        if (isset($_SESSION ['id'])) {
+          echo $_SESSION ['id'];
+        }  else {
+            echo "you are not logged in yet!";
+
+            }
+        }
+
+      ?>
+
+
+    <h2>Sign up - Meet your perfect match</h2>
+
+    <img src="Images\Heart logo.png" alt "Images\Heart logo.png" style="width:50px;height:50px;">
+
+    <h2>Welcome to [brand name here].</h2>
+    <h4>Please fill in the form below to make an account with us on MATCH</h4>
+
+    <p><a href="https://www.w3schools.com/html/">Click here to view the terms and conditions</a></p>
+
+    <img src="images/holding hands.jpg" alt="images/holding hands.jpg" style="width:500px;height:300px;">
+
+    <form action="/action_page.php" method="POST">
+      <h4>First name:</h4><br> <input type="text" name="firstname">
+      <h5>Last name:</h5><br> <input type="text" name="lastname"><br>
+    </br>
+      Email Address<br> <input type="text" name="emailaddress"><br>
+      </br>
+      <strong>CONFIRM Email Address</strong><br> <input type="text" name="confirmemailaddress"><br>
+      </br>
+
+       User password:<br><input type="password" name="psw"><br>
+       <p>Password must contain at least 8 characters</p>
+       <strong>CONFIRM user password:</strong><br><input type="password" name="psw"><br>
+
+       <h4>Username</h4>
+       Desired user name:<br><input type="text" name="username"><br>
+
+       <h4>Adresss</h4>
+       Post Code:<br><input type="text" name="post_code"><br>
+
+       <h4>Sex</h4>
+
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br><br>
+
+      <h4>Input your sexual preference below</h4>
+
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br><br>
+
+      <h4>Date of birth (dd/mm/yyyy)</h4>
+      Date of birth<br><input type="text" name="DOB"><br>
+
+      <h3>Please add a profile image below:</h3>
+      <input type="file" name="pic" accept="image/*"><br>
+      <p></p>
+      Instagram Account:<input id="myURL" type="url"><br>
+      <p></p>
+      <div id="submit-title">
+        <h2>Submit your account!</h2>
+      </div>
+      </br>
+      </br>
+      <div id="black-background">
+      <button class="bttn-white" type="submit">SEND US YA DATA</button>
+      </div>
+
+    </br>
+    </form>
+
+</br></br>/<br>
+    <form action="/logout.php">
+
+        <button>Log OUT</button>
+
+
+    </form>
+
+  </body>
+</html>
